@@ -1,0 +1,29 @@
+<div class="loginform">
+
+    <h1>Login</h1>
+    {{message}}
+    <form id="login" action="/login/check" method="POST">
+
+    <div>
+        <label>
+            <input type="text" name="username" class="login-info" placeholder="Username" required>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input type="password" name="password" class="login-info" placeholder="Password" required>
+        </label>
+    </div>
+
+    <button class="loginbtn">Enter</button>
+
+    </form>
+
+    <hr>
+
+    <div class="have">
+         <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
+
+</div>

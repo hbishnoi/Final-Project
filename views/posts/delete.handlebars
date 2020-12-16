@@ -1,0 +1,12 @@
+<a href="/admin/homepage">Back to homepage</a>
+<div class="deletion">
+
+    <h1>Game Deletion Portal</h1>
+    {{message}}
+    <p class="req">Showing all games</p>
+    {{#each data}}
+    <form action="/games/delete/{{_id}}" method="POST">
+        {{name}}<button class="dbtn" type="submit">Delete</button><br>
+    </form>
+    {{/each}}
+</div>

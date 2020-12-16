@@ -1,0 +1,101 @@
+<div class="signupform">
+
+    <h1>Create Account</h1>
+    {{message}}
+    <form id="signup" action="/signup/newuser" method="POST">
+
+        <div>
+            <label>
+                <input type="text" name="first_name" id="first_name" class="signup-info" placeholder="First Name" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="text" name="last_name" id="last_name" class="signup-info" placeholder="Last Name" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="number" name="age" id="age" class="signup-info" placeholder="Age" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="email" name="email" id="email" class="signup-info" placeholder="Email" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="text" name="username" id="username" class="signup-info" placeholder="Username" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="text" name="state" id="state" class="signup-info" placeholder="State" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="text" name="country" id="country" class="signup-info" placeholder="Country" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="password" name="password" id="password" class="signup-info" placeholder="Password" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="password" name="retypepassword" id="retypepassword" class="signup-info retypepassword" placeholder="Re-enter Password" 
+                    required>
+            </label>
+            <span id="matchpassword"></span>
+        </div>
+
+        <div>
+            <p>
+                <span><input type="checkbox" required></span> Agree terms and conditions.
+            </p>
+        </div>
+
+        <button class="signupbtn">Sign Up</button>
+
+    </form>
+
+    <hr>
+
+    <div class="have">
+        <p>Have an account? <a href="/login">Log In</a></p>
+    </div>
+
+
+
+</div>
+<script>
+    $(document).ready(function(){
+        $("#retypepassword").on("input", function () {
+    //   $(document).on("change", ".retypepassword", (e) => {
+        alert("hello");
+        console.log("hello");
+        var password = $("#password").val();
+        var retypepassword = $("#retypepassword").val();
+        if (password == retypepassword) {
+        $("#matchpassword").show();
+        $("#matchpassword").val("&#9989;");
+        document.getElementById("matchpassword").style.color = "green";
+        } else {
+        $("#matchpassword").show();
+        $("#matchpassword").val("&#10060;");
+        document.getElementById("matchpassword").style.color = "red";
+        }
+        });
+    });
+</script>

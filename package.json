@@ -1,0 +1,30 @@
+{
+  "name": "game-distribution-service",
+  "version": "1.0.0",
+  "description": "final-project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajmahajan3196/Game-Distribution-Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajmahajan3196/Game-Distribution-Service/issues"
+  },
+  "homepage": "https://github.com/rajmahajan3196/Game-Distribution-Service#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "mongodb": "^3.6.3"
+  }
+}

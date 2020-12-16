@@ -1,0 +1,63 @@
+<div class="gdata">
+
+    <h1>{{data.name}}</h1>
+
+    {{!-- <hr> --}}
+
+    <div class="">
+        {{!-- {{#if !data.image }} --}}
+        <img src="/public/images/image_not_available.jpg" alt="Avatar" class="card-image">
+        {{!-- {{/if}} --}}
+        {{!-- {{#if data.image }} --}}
+        {{!-- <img src="/public/images/{{data.image.1}}" alt="Avatar" class="card-image"> --}}
+        {{!-- {{/if}} --}}
+    </div>
+    <hr>
+    <dl> 
+        
+        <dt class="gdata-info">Genre: {{data.genre}}<dt> 
+
+        <dt class="gdata-info">Size: {{data.size}}<dt> 
+       
+        <dt class="gdata-info">Compatibilty: {{data.compatibilty}}<dt> 
+     
+        <dt class="gdata-info">Languages: {{data.languages}}<dt> 
+  
+        <dt class="gdata-info">Age: {{data.age}}<dt> 
+ 
+        <dt class="gdata-info">Website: {{data.website}}<dt> 
+
+        <hr>
+
+        <dt class="gdata-info">Price: {{data.price}}</dt> 
+
+        <button class="buy">Add to Cart</button>
+
+        <hr>
+
+        <dt class="gdata-info">Rating: ########</dt> 
+         
+        <dt class="gdata-info">Reviews:</dt> 
+
+
+    </dl>
+    {{!-- only for login users --}}
+    <div class="col-md-12 form-group">
+        <form action="add" method="POST">
+            <div class="comment-container">
+                <h4>Comment below:</h4><br>
+                <span>Rating: </span><br>
+                <span>Title: </span><input type="text" class="text-inp"><br>
+                <span>Comment:</span><textarea type="text" class="text-inp"></textarea><br>
+                <span>Add Image:</span><input type="file" id="img" name="img" accept="image/*" class="img-inp">
+            </div>
+            <div>
+                <button class="submitbtn" type="submit" class="btn" id="comment-submit" onclick="show();">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div> 
+
+
+
